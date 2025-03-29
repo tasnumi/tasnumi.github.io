@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #323030;
 }
 
 #heading {
@@ -18,14 +18,50 @@ body {
     line-height: 134px;
     /* 139.583% */
     letter-spacing: 9.6px;
+    text-align: center;
 }
 
 nav {
-    background-color: var(--pink);
+    background-color: var(--sage);
     font-family: "Imprima", sans-serif;
+    text-align: center;
+    
+}
+nav a {
+    text-decoration: none;
+    color : black;
 }
 
 nav>ul {
     font-size: 24px;
     line-height: 150%;
+    list-style: none;
+}
+
+nav>ul>li {
+    text-align: center;
+    
+}
+
+.description > p {
+    color: #FFF;
+
+    font-family: HeadlandOne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: #FCE38A;
+
+    font-family: Imprima;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134px;
+    /* 167.5% */
+    letter-spacing: 8px;
 }
