@@ -25,11 +25,16 @@ nav {
     background-color: var(--sage);
     font-family: "Imprima", sans-serif;
     text-align: center;
-    
+
 }
+
 nav a {
     text-decoration: none;
-    color : black;
+    color: black;
+}
+
+nav a:hover {
+    color: var(--pink);
 }
 
 nav>ul {
@@ -40,10 +45,10 @@ nav>ul {
 
 nav>ul>li {
     text-align: center;
-    
+
 }
 
-.description > p {
+.description>p {
     color: #FFF;
 
     font-family: HeadlandOne;
@@ -64,4 +69,28 @@ h1 {
     line-height: 134px;
     /* 167.5% */
     letter-spacing: 8px;
+}
+
+h2 {
+    color: #EAFFD0;
+
+    font-family: Imprima;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134px;
+    /* 239.286% */
+    letter-spacing: 5.6px;
+}
+
+h3 {
+    color: #95E1D3;
+
+    font-family: Imprima;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134px;
+    /* 335% */
+    letter-spacing: 4px;
 }
