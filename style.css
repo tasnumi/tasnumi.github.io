@@ -94,3 +94,8 @@ h3 {
     /* 335% */
     letter-spacing: 8px;
 }
+
+.links-section {
+    display:flex;
+    flex-direction: column;
+}
