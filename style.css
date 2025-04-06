@@ -96,6 +96,101 @@ h3 {
 }
 
 .links-section {
-    display:flex;
+    display: flex;
     flex-direction: column;
+    gap: 12px;
+}
+
+.links-paragraph {
+    color: var(--pink);
+    font-family: HeadlandOne;
+    letter-spacing: 3px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.links a {
+    color: var(--blue);
+    font-family: Imprima;
+}
+
+.links a:hover {
+    color: var(--pink);
+}
+
+.bottom-banner {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    width: 100%;
+    background-color: var(--sage);
+}
+
+.bottom-banner-title {
+    font-size: 24px;
+    color: var(--pink);
+}
+
+.links-button {
+    border: 1px solid var(--pink);
+    padding: 12px;
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+    #heading {
+        color: var(--pink);
+        font-family: HeadlandOne;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px;
+        /* 139.583% */
+        letter-spacing: 9.6px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #fce38a;
+
+        font-family: Imprima;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px;
+        /* 167.5% */
+        letter-spacing: 9.6px;
+    }
+
+    h2 {
+        color: #eaffd0;
+
+        font-family: Imprima;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px;
+        /* 239.286% */
+        letter-spacing: 9.6px;
+    }
+
+    h3 {
+        color: #95e1d3;
+
+        font-family: Imprima;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px;
+        /* 335% */
+        letter-spacing: 9.6px;
+    }
 }
