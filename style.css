@@ -18,10 +18,11 @@ body, html {
 }
 body {
     background-color: var(--lightbrown);
+    background: linear-gradient(to right, var(--lightbrown), var(--darkbrown)); /* Pink gradient */
 }
 
 .main-page {
-    border: 3px solid var(--lightpink);
+    border: 5px solid var(--lightpink);
     
     padding: 20px;
     border-radius: 10px;
@@ -30,6 +31,13 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    font-size: 2em;
+    
+}
+#quiz-container {
+    border: 2px solid var(--lightpink);
+    text-align: center;
+    
     
 }
 
@@ -38,17 +46,23 @@ body {
     margin: 0;
 }
 
-.button {
+.main-page > .bear-personality-welcome > p {
+    color: var(--lightpink);
+}
+
+#start-quiz-button {
     background-color: var(--lightpink);
     font-family: "Pixelify Sans", sans-serif;
-    padding: 15px 30px; 
+    padding: 20px 40px; 
     border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    font-size: 25px;
 }
 
-.button:hover {
+#start-quiz-button:hover {
     background-color: var(--rosepink);
 }
+
