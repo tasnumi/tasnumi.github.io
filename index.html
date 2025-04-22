@@ -15,12 +15,17 @@
     <section class="main-page">
         <div class="bear-personality-welcome">
             <h1>Bear Personality Quiz</h1>
-            <p>press on the start button to take a quiz that determines what kind of bear
+            <p>press on the start button to take a quiz that determines<br> what kind of bear
                 matches your personality!
             </p>
-            <button class="button">start quiz</button>
+            <button id="start-quiz-button" class="button">start quiz</button>
         </div>
     </section>
+    <script>
+        document.getElementById("start-quiz-button").addEventListener("click", function() {
+            window.location.href = "quiz.html"
+        });
+    </script>
 </body>
 
 </html>
