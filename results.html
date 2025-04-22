@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="result-container">
+        <h2>your bear personality</h2>
+        <p id="result-text"></p>
+        <img id="result-gif" src="" alt="bear-personality-gif"/>
+    </section>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const personality = params.get('personality');
+        const gifURL = params.get('gif');
+        document.getElementById('result-text').textContent = personality ? `Your bear personality is: ${personality}!` : "No result found.";
+
+        const gifImage = document.getElementById('result-gif');
+        if(gifURL) {
+            gifImage.src = gifURL;
+        }
+    </script>
+</body>
+</html>

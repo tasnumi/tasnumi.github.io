@@ -5,7 +5,9 @@
     --rosepink: #F8B4C6;
     --hotpink: #CD6582;
 }
-body, html {
+
+body,
+html {
     margin: 0;
     height: 100%;
     display: flex;
@@ -16,14 +18,16 @@ body, html {
     font-weight: 400;
     font-style: normal;
 }
+
 body {
     background-color: var(--lightbrown);
-    background: linear-gradient(to right, var(--lightbrown), var(--darkbrown)); /* Pink gradient */
+    background: linear-gradient(to right, var(--lightbrown), var(--darkbrown));
+    
 }
 
 .main-page {
-    border: 5px solid var(--lightpink);
-    
+    background-color: var(--lightpink);
+    border: 8px solid var(--darkbrown);
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -32,28 +36,34 @@ body {
     text-align: center;
     width: 100%;
     font-size: 2em;
-    
+
 }
+
 #quiz-container {
-    border: 2px solid var(--lightpink);
+    font-family: "Pixelify Sans", sans-serif;
+    background: var(--lightpink);
     text-align: center;
-    
+    border-radius: 20px;
+    border: 8px solid var(--darkbrown);
+    padding: 40px 30px;
+    color: var(--hotpink);
+    font-size: 25px;
     
 }
 
 .main-page>.bear-personality-welcome>h1 {
-    color: var(--lightpink);
+    color: var(--hotpink);
     margin: 0;
 }
 
-.main-page > .bear-personality-welcome > p {
-    color: var(--lightpink);
+.main-page>.bear-personality-welcome>p {
+    color: var(--hotpink);
 }
 
 #start-quiz-button {
-    background-color: var(--lightpink);
+    background-color: white;
     font-family: "Pixelify Sans", sans-serif;
-    padding: 20px 40px; 
+    padding: 20px 40px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -66,3 +76,17 @@ body {
     background-color: var(--rosepink);
 }
 
+#answers button {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px;
+    background-color: var(--);
+    border: 2px solid #f3bebe;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 30px;
+}
