@@ -8,19 +8,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Bear Personality Quiz</title>
 </head>
 
 <body>
-    <section id="quiz-container">
-        <h2 id="question-text"></h2>
 
-        <div id="answers">
+  <section class="wrapping-container">
+    <div id="quiz-container">
+      <div class="bear-image">
+          <img src="https://png.pngtree.com/png-vector/20221021/ourmid/pngtree-cute-bear-head-png-image_6377483.png" alt="">
+      </div>
+      <div id="question-number">Question Number: 1 / 3</div>
+      <h1 id="question-text"></h1>
+
+      <div id="answers">
+          
+      </div>
+    </div>
+  </section>
+
+    <script type="module" src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // Function to create sparkle elements
+          const createSparkles = (button) => {
+            // Remove any existing sparkles first
+            const existingSparkles = button.querySelectorAll('.sparkle');
+            existingSparkles.forEach(sparkle => sparkle.remove());
             
-        </div>
-    </section>
+            // Create 5 sparkle elements
+            for (let i = 0; i < 5; i++) {
+              const sparkle = document.createElement('div');
+              sparkle.className = 'sparkle';
+              button.appendChild(sparkle);
+              
+              // Position randomly within button
+              sparkle.style.left = `${Math.random() * 100}%`;
+              sparkle.style.top = `${Math.random() * 100}%`;
+              
+              // Animate each sparkle
+              anime({
+                targets: sparkle,
+                translateX: () => anime.random(-10, 10),
+                translateY: () => anime.random(-10, 10),
+                scale: [0, 1.5, 0],
+                opacity: [0, 1, 0],
+                duration: 1000,
+                easing: 'easeOutQuad',
+                delay: i * 100,
+              });
+            }
+          };
+        
+          // Event delegation for hover sparkles
+          document.body.addEventListener('mouseover', (event) => {
+            if (event.target.tagName === 'BUTTON') {
+              const button = event.target;
+              
+              // Scale animation
+              anime({
+                targets: button,
+                scale: 1.05,
+                duration: 300,
+                easing: 'easeOutElastic(1, .5)'
+              });
+              
+              // Create sparkles
+              createSparkles(button);
+            }
+          });
+        
+          document.body.addEventListener('mouseout', (event) => {
+            if (event.target.tagName === 'BUTTON') {
+              
+              anime({
+                targets: event.target,
+                scale: 1,
+                duration: 300,
+                easing: 'easeOutElastic(1, .5)'
+              });
+            }
+          });
+        });
+        </script>
+        
+        <style>
+        .sparkle {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: white;
+          border-radius: 50%;
+          pointer-events: none;
+          filter: blur(1px);
+          box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+        }
+        
+        button {
+          position: relative;
+          overflow: hidden;
+        }
+        </style>
 
-    <script src="questions.js"></script>
 </body>
 
 </html>
